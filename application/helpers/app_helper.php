@@ -11,17 +11,17 @@ define("LOKASI_PENGATURAN",             "assets/upload/config/");
 define("LOKASI_REKENING",               "assets/upload/rekening/");
 define("LOKASI_ARMADA",                 "assets/upload/armada/");
 define("LOKASI_TRANSFER",               "assets/upload/bukti-transfer/");
+define("LOKASI_EXCEL_IMPORT",           "assets/upload/excel-import/");
 
 //! FOR ROLES
 define("SUPER_ADMIN",                   "SUPER_ADMIN");
 define("ADMIN",                         "ADMIN");
 define("USER",                          "USER");
 
-//! FOR STATUS USER
+//! FOR STATUS
 define("MENUNGGU",                      "MENUNGGU");
-define("DITERIMA",                      "DITERIMA");
+define("DIPROSES",                      "DIPROSES");
 define("DITOLAK",                       "DITOLAK");
-define("BLOCK",                         "BLOCK");
 
 //! FOR GENDER
 define("LAKI_LAKI",                     "LAKI-LAKI");
@@ -32,7 +32,8 @@ $listDirectoryCheck  = [
     LOKASI_PENGATURAN,
     LOKASI_REKENING,
     LOKASI_ARMADA,
-    LOKASI_TRANSFER
+    LOKASI_TRANSFER,
+    LOKASI_EXCEL_IMPORT
 ];
 
 foreach ($listDirectoryCheck as $list) {

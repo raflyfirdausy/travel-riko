@@ -51,7 +51,6 @@
             </div>
             <div class="col-md-6">
                 <table class="table table-sm nowrap table-bordered">
-
                     <tr>
                         <td>Bukti Transfer</td>
                         <td> <img width="100%" src="<?= $detail["transfer_bukti"] ?>" alt="Bukti pembayaran"> </td>
