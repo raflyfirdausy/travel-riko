@@ -1,0 +1,12 @@
+<script src="https://maps.google.com/maps/api/js?key=AIzaSyCR-KEWAVCn52mSdeVeTqZjtqbmVJyfSus&amp;language=en"></script>
+<script src="/assets/landing/js/vendor/jquery-library.js"></script>
+<script src="/assets/landing/js/vendor/bootstrap.min.js"></script>
+<script src="/assets/landing/js/owl.carousel.min.js"></script>
+<script src="/assets/landing/js/jquery.vide.min.js"></script>
+<script src="/assets/landing/js/countdown.js"></script>
+<script src="/assets/landing/js/jquery-ui.js"></script>
+<script src="/assets/landing/js/parallax.js"></script>
+<script src="/assets/landing/js/countTo.js"></script>
+<script src="/assets/landing/js/appear.js"></script>
+<script src="/assets/landing/js/gmap3.js"></script>
+<script src="/assets/landing/js/main.js"></script>

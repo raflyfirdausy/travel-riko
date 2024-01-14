@@ -1,0 +1,6 @@
+.sessions/*
+vendor/*
+**/node_modules/*
+
+application/controllers/backup/**
+application/models/backup/**

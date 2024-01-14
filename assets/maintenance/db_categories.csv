@@ -1,0 +1,7 @@
+"ID","Code","Name","IsDelete","CreateBy","CreateDate","CreateTerminal","UpdateBy","UpdateDate","UpdateTerminal"
+"1","CL1","Koleksi Umum","0","SYSTEM","12/9/2012 13:56:30","DeniPC","inlislite","23/4/2013 10:11:02","192.168.16.17"
+"2","CL2","Koleksi Khusus","0","SYSTEM","12/9/2012 13:56:30","DeniPC","inlislite","23/4/2013 10:11:09","192.168.16.17"
+"3","CL3","Koleksi Anak-anak","0","SYSTEM","12/9/2012 13:56:30","DeniPC","inlislite","23/4/2013 10:13:24","192.168.16.17"
+"4","CL4","Koleksi Deposit","0","SYSTEM","12/9/2012 13:56:30","DeniPC","SYSTEM","12/9/2012 13:56:30","DeniPC"
+"5","CL6","Koleksi Referens","0","760000606","16/5/2013 15:44:19","192.168.16.9","760000606","16/5/2013 15:44:19","192.168.16.9"
+"6","CL7","koleksi tambahan","0","inlislite","12/6/2013 15:18:08","192.168.16.26","inlislite","12/6/2013 15:18:08","192.168.16.26"

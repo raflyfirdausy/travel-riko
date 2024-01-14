@@ -1,0 +1,7 @@
+"ID","Code","Name","Description","IsDelete","CreateBy","CreateDate","CreateTerminal","UpdateBy","UpdateDate","UpdateTerminal"
+"391","R003","R. Baca Anak","",,"SYSTEM","2/4/2013 19:17:04","(NCIBookMan)","760000606","16/5/2013 15:50:34","192.168.16.9"
+"394","R004","Unit Perpustakaan Keliling","",,"SYSTEM","2/4/2013 19:17:04","(NCIBookMan)","760000606","16/5/2013 15:50:41","192.168.16.9"
+"397","R002","R. Baca Referens","",,"SYSTEM","2/4/2013 19:17:04","(NCIBookMan)","760000606","16/5/2013 15:50:25","192.168.16.9"
+"403","R001","R. Baca Umum","",,"SYSTEM","2/4/2013 19:17:04","(NCIBookMan)","760000606","16/5/2013 15:50:13","192.168.16.9"
+"404","R005","lokasi tambahan","","0","inlislite","12/6/2013 15:22:10","192.168.16.26","inlislite","12/6/2013 15:22:10","192.168.16.26"
+"405","R006","RUANG BACA DEWASA","","0","admindaerah","25/10/2013 09:22:41","192.80.79.11","admindaerah","25/10/2013 09:22:41","192.80.79.11"
