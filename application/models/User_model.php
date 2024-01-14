@@ -75,7 +75,7 @@ class User_model extends RFL_Model
                     "chain"         => FALSE,
                     "to"            => NULL,
                     "serverSide"    => FALSE,
-                    "data"          => $gender,
+                    "data"          => $gender, 
                 ],
             ],
             [

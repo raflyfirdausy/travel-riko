@@ -10,6 +10,7 @@ define("NO_DATA",                       base_url("assets/img/app/no-data.jpg"));
 define("LOKASI_PENGATURAN",             "assets/upload/config/");
 define("LOKASI_REKENING",               "assets/upload/rekening/");
 define("LOKASI_ARMADA",                 "assets/upload/armada/");
+define("LOKASI_TRANSFER",               "assets/upload/bukti-transfer/");
 
 //! FOR ROLES
 define("SUPER_ADMIN",                   "SUPER_ADMIN");
@@ -30,7 +31,8 @@ define("PEREMPUAN",                     "PEREMPUAN");
 $listDirectoryCheck  = [
     LOKASI_PENGATURAN,
     LOKASI_REKENING,
-    LOKASI_ARMADA
+    LOKASI_ARMADA,
+    LOKASI_TRANSFER
 ];
 
 foreach ($listDirectoryCheck as $list) {

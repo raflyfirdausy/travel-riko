@@ -1,14 +1,14 @@
 <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-        <a href="/" class="logo d-flex align-items-center">
+        <a href="<?= base_url() ?>" class="logo d-flex align-items-center">
             <span class="d-none d-lg-block"><?= getSetting("JUDUL_WEBSITE") ?: env("APP_TITLE") ?></span>
         </a>
         <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
 
     <div class="search-bar">
-       
+
     </div>
 
 
