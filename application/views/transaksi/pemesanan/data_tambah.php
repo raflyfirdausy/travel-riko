@@ -43,6 +43,7 @@
                                     <th>Nama Kendaraan</th>
                                     <th>Waktu Berangkat</th>
                                     <th>Waktu Sampai</th>
+                                    <th>Sisa Kursi</th>
                                     <th>Harga</th>
                                     <th>Pilih Jadwal</th>
                                 </tr>
@@ -67,7 +68,6 @@
             $("#btnLihatJadwal").text("Lihat Jadwal")
             $("#btnLihatJadwal").removeClass("btn-danger")
             $("#btnLihatJadwal").addClass("btn-primary")
-
         }
     }
 
@@ -202,8 +202,9 @@
                     <td>${currentValue.nama_kendaraan}</td>
                     <td>${currentValue.waktu_berangkat}</td>
                     <td>${currentValue.waktu_sampai}</td>
+                    <td>${currentValue.sisa_kursi}</td>
                     <td>${formatRupiah(currentValue.harga)}</td>
-                    <td class="text-center"><button class="btn btn-success" onclick="pilih('${currentValue.uuid}', '${pemesan}', '${telp}', '${tanggal}', '${lokasi}')">Pilih Jadwal</button></td>
+                    <td class="text-center"><button ${currentValue.sisa_kursi === 0 ? "disabled" : ""} class="btn btn-${currentValue.sisa_kursi > 0 ? "success" : "danger"}" onclick="pilih('${currentValue.uuid}', '${pemesan}', '${telp}', '${tanggal}', '${lokasi}')">Pilih Jadwal</button></td>
                 </tr>
             `
         })

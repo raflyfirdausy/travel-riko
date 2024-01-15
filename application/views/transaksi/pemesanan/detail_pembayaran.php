@@ -53,6 +53,8 @@
                 <table class="table table-sm nowrap table-bordered">
                     <tr>
                         <td>Bukti Transfer</td>
+                    </tr>
+                    <tr>
                         <td> <img width="100%" src="<?= $detail["transfer_bukti"] ?>" alt="Bukti pembayaran"> </td>
                     </tr>
                 </table>

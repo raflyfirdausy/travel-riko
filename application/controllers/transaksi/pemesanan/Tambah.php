@@ -51,7 +51,11 @@ class Tambah extends RFL_Controller
 
         $jadwal         = $this->vJadwal->where(["no_hari" => $noHari, "aktif" => "YA"])->get_all() ?: [];
         for ($i = 0; $i < sizeof($jadwal); $i++) {
-            $jadwal[$i]["image_kendaraan"] = setImage(LOKASI_ARMADA, $jadwal[$i]["image_kendaraan"]);
+            $jadwal[$i]["image_kendaraan"]  = setImage(LOKASI_ARMADA, $jadwal[$i]["image_kendaraan"]);
+
+            $currentBooking                 = $this->booking->where(["uuid_jadwal" => $jadwal[$i]["uuid"], "status !=" => DITOLAK])->count_rows();
+            $jadwal[$i]["kapasitas"]        = $jadwal[$i]["kapasitas"] ?: 0;
+            $jadwal[$i]["sisa_kursi"]       = $jadwal[$i]["kapasitas"] - $currentBooking;
         }
 
         echo json_encode([

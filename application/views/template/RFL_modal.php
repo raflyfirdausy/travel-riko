@@ -100,7 +100,7 @@
                                         <?php endif ?>
                                     <?php endif ?>
                                 <?php else : ?>
-                                    <?php if (!$ishideFromCreate) : ?>
+                                 <   <?php if (!$ishideFromCreate) : ?>
                                         <input <?= $form["type"] == "number" ? "step='any'" : "" ?> <?= ($form["type"] == "file" && isset($form["accept"])) ? "accept=" . generateAcceptFiles($form["accept"]) : "" ?> <?= $isRequired ?> <?= $readOnly ?> class="form-control" onkeyup="<?= isset($form["numberOnly"]) && $form["numberOnly"]  ? "validateNumberOnly(this)" : "" ?>" type="<?= $form["type"] ?>" name="<?= $form["name"] ?>" id="<?= $idForm ?>" value="<?= isset($form["value"]) ? $form["value"] : "" ?>">
                                         <?php if (isset($form["note_create"]) && !empty($form["note_create"])) : ?>
                                             <small class="text-info"><?= $form["note_create"] ?></small>

@@ -73,6 +73,7 @@
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">                                                                                     
                             <a href="<?= base_url('/transaksi/pemesanan/detail/view/') ?>${data}" class="dropdown-item"><i class="fas fa-eye"></i> Detail</a>
+                            <a href="<?= base_url('/transaksi/pemesanan/tambah/pembayaran/') ?>${data}" class="dropdown-item"><i class="fas fa-file-invoice-dollar"></i> Pembayaran</a>
                             <button onclick="terimaTolak('${data}')" class="dropdown-item"><i class="fas fa-question"></i> Terima / Tolak</button>                                                                  
                             <button onclick="hapus('${data}')" class="dropdown-item"><i class="fas fa-trash"></i> Hapus</button>                                                                  
                         </div>
