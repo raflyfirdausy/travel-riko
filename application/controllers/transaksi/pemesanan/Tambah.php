@@ -73,6 +73,10 @@ class Tambah extends RFL_Controller
         $lokasi             = $this->input->post("lokasi");
         $uuidJadwal         = $this->input->post("uuid_jadwal");
 
+        if ($this->session->userdata(SESSION)["role"] === USER) {
+            $uuidPemesan = $this->session->userdata(SESSION)["uuid"];
+        }
+
         if (!validateDate($tanggal)) {
             echo json_encode([
                 "code"      => 503,

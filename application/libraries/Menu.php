@@ -218,13 +218,13 @@ class Menu
     {
         return [
             "title"         => "Pemesanan Travel",
-            "roles"         => [SUPER_ADMIN, ADMIN],
+            "roles"         => [SUPER_ADMIN, ADMIN, USER],
             "child"         => [
                 [
                     "title"     => "Tambah Pemesanan",
                     "path"      => "/transaksi/pemesanan/tambah",
                     "icon"      => "nav-icon fas fa-plus",
-                    "roles"     => [SUPER_ADMIN, ADMIN],
+                    "roles"     => [SUPER_ADMIN, ADMIN, USER],
                     "child"     => [],
                 ],
                 [
@@ -253,6 +253,13 @@ class Menu
                     "path"      => "/transaksi/pemesanan/semua",
                     "icon"      => "nav-icon fas fa-list-ul",
                     "roles"     => [SUPER_ADMIN, ADMIN],
+                    "child"     => [],
+                ],
+                [
+                    "title"     => "Riwayat Pemesanan",
+                    "path"      => "/transaksi/pemesanan/riwayat",
+                    "icon"      => "nav-icon fas fa-list-ul",
+                    "roles"     => [USER],
                     "child"     => [],
                 ],
             ],

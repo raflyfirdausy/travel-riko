@@ -8,10 +8,10 @@
                 <div class="row">
                     <div class="col-md-4">
                         <label for="">Pemesan <span class="text-danger">*</span></label>
-                        <select required class="form-control select2" id="uuid_user" name="uuid_user" style="width: 100%;">
+                        <select required <?= $this->session->userdata(SESSION)["role"] === USER ? "disabled" : "" ?> class="form-control select2" id="uuid_user" name="uuid_user" style="width: 100%;">
                             <option value="">Pilih User</option>
                             <?php foreach ($user as $opt) : ?>
-                                <option value="<?= $opt["uuid"] ?>"><?= $opt["nama"] ?> (<?= $opt["username"] ?>)</option>
+                                <option <?= ($this->session->userdata(SESSION)["role"] === USER && $opt["uuid"] === $this->session->userdata(SESSION)["uuid"]) ? "selected" : "" ?> value="<?= $opt["uuid"] ?>"><?= $opt["nama"] ?> (<?= $opt["username"] ?>)</option>
                             <?php endforeach ?>
                         </select>
                     </div>
@@ -254,7 +254,7 @@
                                 title: "Sukses",
                                 text: result.message,
                                 icon: "success",
-                                allowOutsideClick : false,                                
+                                allowOutsideClick: false,
                                 confirmButtonText: "Lanjutkan ke pembayaran"
                             }).then(x => {
                                 location.href = "<?= base_url("/transaksi/pemesanan/tambah/pembayaran/") ?>" + result.data
