@@ -7,75 +7,47 @@ class Dashboard extends RFL_Controller
     {
         parent::__construct();
         $this->load->model([
-            "User_model"        => "user"
+            "User_model"        => "user",
+            "Armada_model"      => "armada",
+            "Booking_model"     => "booking",
+            "Kota_model"        => "kota",
+            "Rekening_model"    => "rekening",
         ]);
     }
 
     public function index()
     {
-        // $user       = $this->getCurrentUser();
+        $user       = $this->user->where(["role" => USER])->count_rows();
+        $kota       = $this->kota->count_rows();
+        $rekening   = $this->rekening->count_rows();
+        $armada     = $this->armada->count_rows();
+
+
+        $menunggu   = $this->booking->where(["status" => MENUNGGU])->count_rows();
+        $diproses   = $this->booking->where(["status" => DIPROSES])->count_rows();
+        $ditolak    = $this->booking->where(["status" => DITOLAK])->count_rows();
+
 
         $data       = [
             "title"         => "Dashboard",
+
+            "total"         => [
+                "user"          => $user,
+                "kota"          => $kota,
+                "rekening"      => $rekening,
+                "kendaraan"     => $armada,
+
+                "menunggu"      => $menunggu,
+                "diproses"      => $diproses,
+                "ditolak"       => $ditolak
+            ]
             // "user"          => $user
         ];
 
-        $this->loadRFLView("dashboard/dashboard", $data);
-    }
-
-    public function maintenance()
-    {
-        die("ACCESS DENIED");
-        $inputFileType  = 'Csv';
-        $inputFileName  = LOKASI_MAINTENANCE . "sample.csv";
-        $reader         = \PhpOffice\PhpSpreadsheet\IOFactory::createReader($inputFileType);
-        $spreadsheet    = $reader->load($inputFileName);
-        $worksheet      = $spreadsheet->getActiveSheet();
-
-        $dataArray  = $worksheet->toArray();
-        $data       = [];
-        $bahasa     = [];
-        $kolomB     = [];
-        foreach ($dataArray as $da) {
-            $data[] = [
-                "uuid_kategori"     => "5b99b9eb-dd53-4a0a-bb4a-8a180cd5f07e",
-                "uuid_bahasa"       => $da[9] === "Indonesia" ? "f076ec07-5d80-4280-a5a5-676927bf70aa" : ($da[9] === "English" ? "7539fc07-011d-4992-97f7-9b450ef55088" : NULL),
-                "image"             => $da[13],
-                "judul"             => $da[0],
-                "deskripsi_buku"    => $da[12],
-                "deskripsi_fisik"   => $da[6],
-                "pengarang"         => $da[14],
-                "isbn_issn"         => $da[3],
-                "call_number"       => $da[8],
-                "penerbit_kota"     => $da[10],
-                "penerbit_nama"     => $da[4],
-                "penerbit_tahun"    => $da[5],
-                "edisi"             => $da[2],
-                "is_tabagasi"       => "TIDAK"
-            ];
-
-            if (!in_array($da[9], $bahasa)) {
-                if (!empty($da[9])) {
-                    $bahasa[] = $da[9];
-                }
-            }
-
-            if (!in_array($da[1], $kolomB)) {
-                $kolomB[] = $da[1];
-            }
+        if($this->session->userdata(SESSION)["role"] === USER){
+            redirect(base_url("transaksi/pemesanan/tambah"));
         }
 
-        // d($data);
-
-        $this->load->model(["Buku_model" => "buku"]);
-        $this->buku->insert($data);
-        d([
-            "total"     => sizeof($data),
-            "kolomB"    => $kolomB,
-            "bahasa"    => $bahasa,
-            "data"      => $data
-        ]);
-
-        // d($worksheet->toArray());
+        $this->loadRFLView("dashboard/dashboard", $data);
     }
 }

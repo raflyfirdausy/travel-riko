@@ -134,7 +134,7 @@ class Menu
     {
         return [
             "title"         => "Beranda",
-            "roles"         => ["*"],
+            "roles"         => [ADMIN, SUPER_ADMIN],
             "child"         => [
                 [
                     "title"     => "Dashboard",
