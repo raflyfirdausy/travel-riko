@@ -81,6 +81,9 @@
                                         <div class="col-12">
                                             <button class="btn btn-primary w-100" type="submit">Masuk</button>
                                         </div>
+                                        <div class="col-12">
+                                            <p class="small mb-0">Belum punya akun ? <a href="<?= base_url("auth/register") ?>">Daftar disini</a></p>
+                                        </div>
                                     </form>
 
                                 </div>
